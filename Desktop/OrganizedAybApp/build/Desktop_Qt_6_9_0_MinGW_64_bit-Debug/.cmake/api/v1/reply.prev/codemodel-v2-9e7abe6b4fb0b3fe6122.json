@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-e4686f3d3a447015dfb2.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "cinema",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "cinema::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cinema-Debug-f21d1e1dd827fd2adcd1.json",
+					"name" : "cinema",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cinema_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cinema_autogen-Debug-fbe4b64b7d149697d8c3.json",
+					"name" : "cinema_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cinema_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cinema_autogen_timestamp_deps-Debug-5d9e589b61d01d866e48.json",
+					"name" : "cinema_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/AYOUB/Documents/cinema/build/Desktop_Qt_6_9_0_MinGW_64_bit-Debug",
+		"source" : "C:/Users/AYOUB/Documents/cinema"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

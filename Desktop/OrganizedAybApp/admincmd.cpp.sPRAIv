@@ -1,0 +1,44 @@
+#include "admincmd.h"
+#include "ui_admincmd.h"
+#include <QIntValidator>
+#include <QSqlQuery>
+#include <QSqlError>
+
+admincmd::admincmd(QWidget *parent)
+    : QWidget(parent)
+    , ui(new Ui::admincmd)
+{
+    ui->setupUi(this);
+    ui->lineEditInt->setValidator(new QIntValidator(0, 10000, this));
+    connect(ui->pushButton, &QPushButton::clicked, this, &admincmd::DropFilm);
+}
+
+admincmd::~admincmd()
+{
+    delete ui;
+}
+void admincmd::showinterface()
+{
+    admincmd *ad = new admincmd;
+    ad->show();
+}
+void admincmd::DropFilm()
+{
+    QSqlQuery query;
+    int x = ui->lineEditInt->text().toInt();
+    query.prepare("DELETE FROM Film WHERE ID=:a");
+
+    query.bindValue(":a", x);
+    if(!query.exec())
+    {
+        qDebug()<<"Erreur: "<<query.lastError().text();
+    }
+    else if (query.numRowsAffected() == 0) {
+        qDebug() << "No film found with that ID.";
+    }
+
+    else
+    {
+        qDebug()<<"Film deleted successfully";
+    }
+}
